@@ -1,0 +1,12 @@
+2023-09-15 08:32:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * [*]POST"; SQL statement:
+SELECT * POST [42000-214]
+2023-09-15 08:32:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * [*]POST"; SQL statement:
+SELECT * POST [42000-214]
+2023-09-15 08:32:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * [*]POST"; SQL statement:
+SELECT * POST [42000-214]
+2023-09-15 08:32:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * [*]POST"; SQL statement:
+SELECT * POST [42000-214]

@@ -21,7 +21,7 @@ public class BlogController {
     @GetMapping("/")
     public String homePage(Model model) {
         List<Post> posts = postService.getAll();
-        model.addAttribute("posts", posts); //to figure out why "posts and post" matters
+        model.addAttribute("posts", posts); 
         return "index";
     }
 }

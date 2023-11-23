@@ -29,9 +29,10 @@ public class SeedData implements CommandLineRunner {
     @Override
     public void run (String... args) throws Exception{
         List<Post> post = postService.getAll();
+        // Check if there are any posts in the database
 
         if (post.size() == 0){
-
+            // Create Authority objects for ROLE_USER and ROLE_ADMIN
             Authority user = new Authority();
             user.setName("ROLE_USER");
             authorityRepository.save(user);
@@ -40,9 +41,11 @@ public class SeedData implements CommandLineRunner {
             admin.setName("ROLE_ADMIN");
             authorityRepository.save(admin);
 
+            // Create Account objects with associated authorities
             Account account1 = new Account();
             Account account2 = new Account();
 
+            // Configuring details for account1
             account1.setFirstName("user");
             account1.setLastName("user");
             account1.setEmail("user.user@domain.com");
@@ -61,9 +64,12 @@ public class SeedData implements CommandLineRunner {
             authorityRepository.findById("ROLE_USER").ifPresent(authorities2::add);
             account2.setAuthorities(authorities2);
 
+            // Save the account details
             accountService.save(account1);
             accountService.save(account2);
 
+
+            // Create Post objects associated with respective accounts
             Post post1 = new Post();
             post1.setTitle("What is a Healthy Lifestyle?");
             post1.setBody("A healthy lifestyle is generally characterized as a “balanced life” in which one makes “wise choices”");
